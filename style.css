@@ -1,0 +1,490 @@
+/* Universal resetting for clean styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(216, 238, 251);
+    font-family: "Roboto";
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+
+}
+
+
+main{
+    flex-grow: 1;
+}
+/* Header with logo and ITI name from here */
+#header {
+    margin: 5px;
+    width: auto;
+    min-width: 290px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-inline: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    background: linear-gradient(to right, #eed89b, rgb(121, 238, 121), #a8acf7);
+    /* background-color: rgb(171, 242, 165); */
+    border-radius: 10px;
+    transition: box-shadow 0.5s ease, transform 0.7s ease;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#header:hover {
+    box-shadow: 0px 0px 10px #000000;
+    transform: scale(1.002);
+
+}
+
+.logo-container {
+    height: 70px;
+    width: 70px;
+    min-width: 50px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+#map {
+    opacity: 1;
+    font-size: large;
+}
+
+.logo-container img {
+    height: 100%;
+    width: 100%;
+}
+
+#iti_name_logo {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: clamp(1rem, 5vw, 2rem);
+}
+
+#start {
+    color: rgb(255, 157, 0);
+}
+
+#mid {
+    color: rgb(4, 151, 4);
+}
+
+#end {
+    color: rgb(5, 5, 173);
+}
+
+/* Navigation Bar starts from here */
+
+#navbar {
+    background-color: white;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px #8e8b8b;
+    position: sticky;
+    top: 5px;
+    -webkit-user-select: none;
+    user-select: none;
+
+}
+
+#navbar ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 5px;
+    list-style: none;
+
+
+
+    li a {
+        display: block;
+        color: black;
+        font-size: small;
+        text-decoration: none;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding: 5px;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+        position: relative;
+    }
+}
+
+#navbar ul li a:hover {
+    transform: scale(1.05);
+}
+
+#navbar ul li a:active {
+    transform: scale(0.9);
+}
+
+#navbar ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0px;
+    height: 5px;
+    background-color: green;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+
+}
+
+#navbar ul li a:hover::after {
+    width: 100%;
+    transform: translateX(-50%);
+
+}
+
+
+/* Carousel for hero section */
+#carousel {
+    background-color: white;
+    max-height: 250px;
+    display: flex;
+    margin: 5px;
+    margin-top: 10px;
+    border-radius: 10px;
+    overflow-y: auto;
+    scroll-snap-type: x mandatory;
+    padding: 5px;
+    gap: 5px;
+    scrollbar-width: none;
+
+
+    img {
+        width: 100%;
+        border-radius: inherit;
+        scroll-snap-align: center;
+        object-fit: cover;
+    }
+
+}
+
+#about_iti {
+    margin: 5px;
+    gap: 10px;
+    display: grid;
+    background-color: white;
+    overflow-x: auto;
+    padding: 10px;
+    border-radius: 10px;
+    grid-template-columns: 350px 1fr;
+    grid-template-areas:
+        "about_top  about_top"
+        "img    text";
+
+    h3 {
+        grid-area: about_top;
+        text-align: center;
+        font-weight: bold;
+        background-color: rgb(232, 232, 232);
+        border-radius: 5px;
+        padding: 5px;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        grid-area: img;
+        border-radius: 10px;
+        object-fit: cover;
+
+    }
+
+    div {
+        grid-area: text;
+        overflow-y: auto;
+        max-height: 230px;
+        background-color: rgb(232, 232, 232);
+        padding: 5px;
+        border-radius: 10px;
+        scrollbar-width: none;
+
+        p {
+            font-size: 1rem;
+            text-align: justify;
+        }
+
+    }
+}
+
+@media (max-width : 395px) {
+    #about_iti {
+        grid-template-areas:
+            "about_top  about-top"
+            "img     img"
+            "text   text";
+    }
+}
+
+
+#useful_links {
+    background-color: white;
+    margin: 5px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    gap: 20px;
+
+
+    h4 {
+        padding: 5px;
+        background-color: rgb(193, 192, 192);
+        border-radius: inherit;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        
+    }
+
+    #student_corner {
+        border-radius: inherit;
+        background-color: rgb(220, 220, 220);
+        transition: all 0.4s ease;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+
+        #links {
+            display: flex;
+            flex-direction: column;
+            width: fit-content;
+            padding: 5px;
+
+            a {
+                text-decoration: none;
+                color: rgb(1, 9, 86);
+                font-size: 1rem;
+
+            }
+        }
+
+
+    }
+
+    #student_corner:hover{
+        transform: scale(1.01);
+        background-color: rgb(176, 176, 176);
+
+    }
+
+    #perks{
+        /* width: 40%; */
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+
+    .perk{
+        display: flex;
+        font-size: small;
+        gap: 10px;
+        align-items: center;
+        background-color: rgb(220, 220, 220);
+        border-radius: 10px;
+        padding: 10px;
+        
+
+
+        .perk-icon{
+            border-radius: 50%;
+            padding: 10px;
+            background-color: #3874f6;
+            color: white;
+        }
+
+        i{
+           font-size: 1rem;
+
+        }
+
+    }
+
+
+
+
+    #portals {
+
+        border-radius: inherit;
+        background-color: rgb(220, 220, 220);
+        transition: all 0.4s ease;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        
+
+        #links {
+            display: flex;
+            flex-direction: column;
+            width: fit-content;
+            padding: 5px;
+
+            a {
+                text-decoration: none;
+                color: rgb(1, 9, 86);
+                font: size 1rem;
+            }
+        }
+    }
+
+    #portals:hover{
+        transform: scale(1.01);
+        background-color: rgb(176, 176, 176);
+
+    }
+}
+
+@media (max-width: 600px) {
+    #useful_links{
+        flex-direction: column;
+
+    }
+
+}
+
+#main_footer {
+    background-color: white;
+    margin: 5px;
+    border-radius: 10px;
+    padding: 5px;
+
+
+    #foot_tags {
+        width: 95%;
+        margin: 10px auto;
+        background-color: rgb(193, 193, 193);
+        border-radius: inherit;
+
+        #tag {
+            height: 120px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+
+            h4 {
+                text-align: center;
+            }
+
+            a{
+                height: 50px;
+                width: 50px;
+                background-color: white;
+                display: flex;
+                text-decoration: none;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+
+            }
+
+            i {
+                
+                color: black;
+                font-size: 2rem;
+
+            }
+
+            p {
+                text-align: center;
+                font-size: small;
+            }
+        }
+    }
+}
+
+@media (min-width : 650px) {
+    #main_footer {
+        #foot_tags {
+            display: flex;
+            justify-content: space-evenly;
+            gap: 10px;
+
+            #tag {
+                width: 300px;
+                height: 300px;
+                max-width: 300px;
+
+            }
+        }
+
+
+
+    }
+
+
+
+}
+
+
+#copyright{
+    background-color: #fff;
+    width: 95%;
+    margin: 5px auto;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 12px;
+    background-color: rgb(193, 193, 193);
+    padding: 10px;
+    border-radius: 5px;
+    
+}
+
+#copyright div{
+    text-align: center;
+}
+
+
+/* Faculty page styling */
+#faculty-table{
+    background-color: white;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+}
+
+table{
+    border-collapse: collapse;
+    border-width: 2px;
+    min-width: 400px;
+    box-shadow: 0px 0px 20px #d2dbf8;
+}
+
+table th{
+    padding: 5px;
+    background-color: rgb(199, 199, 199);
+}
+
+table img{
+    height: 50px;
+    max-height: 150px;
+    width: 50px;
+    max-width: 150px;
+}
+
+table td{
+    padding: 10px;
+}
