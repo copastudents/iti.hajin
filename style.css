@@ -15,9 +15,10 @@ body {
 }
 
 
-main{
+main {
     flex-grow: 1;
 }
+
 /* Header with logo and ITI name from here */
 #header {
     margin: 5px;
@@ -248,10 +249,11 @@ main{
         justify-content: center;
         align-items: center;
         text-transform: uppercase;
-        
+
     }
 
     #student_corner {
+        /* width: 20%; */
         border-radius: inherit;
         background-color: rgb(220, 220, 220);
         transition: all 0.4s ease;
@@ -278,21 +280,21 @@ main{
 
     }
 
-    #student_corner:hover{
-        transform: scale(1.01);
+    #student_corner:hover {
+        /* transform: scale(1.01); */
         background-color: rgb(176, 176, 176);
+        box-shadow: 5px 5px 10px #adadad;
 
     }
 
-    #perks{
-        /* width: 40%; */
+    #perks {
         display: flex;
         flex-direction: column;
         gap: 15px;
     }
 
 
-    .perk{
+    .perk {
         display: flex;
         font-size: small;
         gap: 10px;
@@ -300,28 +302,35 @@ main{
         background-color: rgb(220, 220, 220);
         border-radius: 10px;
         padding: 10px;
-        
+        transition: all 0.4s ease;
 
 
-        .perk-icon{
+
+        .perk-icon {
             border-radius: 50%;
             padding: 10px;
             background-color: #3874f6;
             color: white;
         }
 
-        i{
-           font-size: 1rem;
+        i {
+            font-size: 1rem;
 
         }
 
+    }
+
+    .perk:hover {
+        /* transform: scale(1.01); */
+        background-color: rgb(176, 176, 176);
+        box-shadow: 5px 5px 10px #adadad;
     }
 
 
 
 
     #portals {
-
+        /* width: 20%; */
         border-radius: inherit;
         background-color: rgb(220, 220, 220);
         transition: all 0.4s ease;
@@ -329,7 +338,7 @@ main{
         display: flex;
         flex-direction: column;
         gap: 10px;
-        
+
 
         #links {
             display: flex;
@@ -345,15 +354,16 @@ main{
         }
     }
 
-    #portals:hover{
-        transform: scale(1.01);
+    #portals:hover {
+        /* transform: scale(1.01); */
         background-color: rgb(176, 176, 176);
+        box-shadow: 5px 5px 10px #adadad;
 
     }
 }
 
 @media (max-width: 600px) {
-    #useful_links{
+    #useful_links {
         flex-direction: column;
 
     }
@@ -385,7 +395,7 @@ main{
                 text-align: center;
             }
 
-            a{
+            a {
                 height: 50px;
                 width: 50px;
                 background-color: white;
@@ -398,7 +408,7 @@ main{
             }
 
             i {
-                
+
                 color: black;
                 font-size: 2rem;
 
@@ -436,7 +446,7 @@ main{
 }
 
 
-#copyright{
+#copyright {
     background-color: #fff;
     width: 95%;
     margin: 5px auto;
@@ -447,16 +457,16 @@ main{
     background-color: rgb(193, 193, 193);
     padding: 10px;
     border-radius: 5px;
-    
+
 }
 
-#copyright div{
+#copyright div {
     text-align: center;
 }
 
 
 /* Faculty page styling */
-#faculty-table{
+#faculty-table {
     background-color: white;
     margin: 10px;
     padding: 20px;
@@ -466,25 +476,25 @@ main{
     overflow-x: auto;
 }
 
-table{
+table {
     border-collapse: collapse;
     border-width: 2px;
     min-width: 400px;
     box-shadow: 0px 0px 20px #d2dbf8;
 }
 
-table th{
+table th {
     padding: 5px;
     background-color: rgb(199, 199, 199);
 }
 
-table img{
+table img {
     height: 50px;
     max-height: 150px;
     width: 50px;
     max-width: 150px;
 }
 
-table td{
+table td {
     padding: 10px;
 }
