@@ -6,11 +6,11 @@
 }
 
 body {
-    background-color: rgb(216, 238, 251);
+    background-color: rgb(234, 245, 251);
     font-family: "Roboto";
     display: flex;
     flex-direction: column;
-    height: 100dvh;
+    /* height: 100dvh; */
 
 }
 
@@ -94,6 +94,7 @@ main {
     top: 5px;
     -webkit-user-select: none;
     user-select: none;
+    z-index: 2;
 
 }
 
@@ -291,6 +292,8 @@ main {
         display: flex;
         flex-direction: column;
         gap: 15px;
+        -webkit-user-select: none;
+        user-select: none;
     }
 
 
@@ -367,6 +370,7 @@ main {
         flex-direction: column;
 
     }
+
 
 }
 
@@ -472,14 +476,15 @@ main {
     padding: 20px;
     border-radius: 10px;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     overflow-x: auto;
+    scroll-behavior: smooth;
 }
 
 table {
     border-collapse: collapse;
     border-width: 2px;
-    min-width: 400px;
+    min-width: 650px;
     box-shadow: 0px 0px 20px #d2dbf8;
 }
 
@@ -497,4 +502,75 @@ table img {
 
 table td {
     padding: 10px;
+}
+
+
+/* Trades Page starts from here */
+.trade {
+    background-color: white;
+    margin: 20px 10px;
+    padding: 10px;
+    border-radius: 10px;
+    display: grid;
+    gap: 20px;
+    z-index: 2;
+    transition: all 0.5s ease;
+    box-shadow: 0px 10px 10px rgb(138, 138, 138);
+    align-items: center;
+    grid-template-columns: 250px 1fr 1fr;
+    grid-template-areas:
+        "name   name    name"
+        "img    para    para";
+}
+
+#trade-name {
+    grid-area: name;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: rgb(169, 169, 169);
+    padding: 10px;
+    border-radius: inherit;
+}
+
+#trade-img {
+    grid-area: img;
+    border-radius: inherit;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(193, 193, 193);
+    overflow: hidden;
+
+    img {
+        border-radius: inherit;
+        height: 100%;
+        width: 100%;
+
+    }
+}
+
+#trade-info {
+    height: 200px;
+    grid-area: para;
+    width: 100%;
+    overflow-y: auto;
+    background-color: rgb(235, 235, 235);
+    padding: 5px;
+    border-radius: inherit;
+    scrollbar-width: none;
+}
+
+@media (max-width: 600px) {
+    .trade {
+        grid-template-areas:
+            "name   name    name"
+            "img    img     img"
+            "para   para    para";
+    }
+
+}
+
+.trade:hover{
+    transform: scale(1.01);
 }

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>ITI Hajin | Contact</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        body {
+            font-family: "Roboto";
+            background-color: rgb(220, 239, 253)
+        }
+
+        #navbar {
+            background-color: white;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 10px #8e8b8b;
+            position: sticky;
+            top: 5px;
+            -webkit-user-select: none;
+            user-select: none;
+            z-index: 2;
+
+        }
+
+        #navbar ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            gap: 5px;
+            list-style: none;
+
+
+
+            li a {
+                display: block;
+                color: black;
+                font-size: small;
+                text-decoration: none;
+                font-weight: bold;
+                text-transform: uppercase;
+                padding: 5px;
+                border-radius: 10px;
+                transition: all 0.3s ease;
+                position: relative;
+            }
+        }
+
+        #navbar ul li a:hover {
+            transform: scale(1.05);
+        }
+
+        #navbar ul li a:active {
+            transform: scale(0.9);
+        }
+
+        #navbar ul li a::after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            width: 0px;
+            height: 5px;
+            background-color: green;
+            transition: all 0.3s ease;
+            border-radius: 5px;
+
+        }
+
+        #navbar ul li a:hover::after {
+            width: 100%;
+            transform: translateX(-50%);
+
+        }
+
+        .container {
+            margin: 10px;
+            background: rgb(238, 236, 238);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgb(17, 36, 7);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            h3 {
+                text-transform: uppercase;
+                background-color: rgb(202, 202, 202);
+                padding: 10px;
+                text-align: center;
+                width: 99%;
+                border-radius: 10px;
+            }
+
+            div {
+                display: flex;
+                height: 20px;
+                gap: 10px;
+                color: black;
+
+                i {
+                    font-size: 1rem;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: black;
+                }
+
+            }
+
+        }
+
+        #copyright {
+            background-color: #fff;
+            width: 95%;
+            margin: 5px auto;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            font-size: 12px;
+            background-color: rgb(193, 193, 193);
+            padding: 10px;
+            border-radius: 5px;
+
+        }
+
+        #map {
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h3 {
+                text-transform: uppercase;
+                background-color: rgb(202, 202, 202);
+                padding: 10px;
+                text-align: center;
+                width: 99%;
+                border-radius: 10px;
+
+            }
+
+            iframe {
+                border: none;
+                border-radius: 10px;
+            }
+
+        }
+
+
+
+        #copyright div {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="navbar">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="trades.html">Trades</a></li>
+                <li><a href="faculty.html">Faculty</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </section>
+    <div class="container">
+        <h3>Contact Info</h3>
+        <div>
+            <i class="fa-solid fa-location-dot"></i>
+            <p>Hajin, Sonawari - Bandipora, 193501</p>
+        </div>
+        <div>
+            <i class="fa-solid fa-phone"></i>
+            <p>1234567890</p>
+        </div>
+        <div>
+            <i class="fa-solid fa-envelope"></i>
+            <p><a href="mailto:iti.hajin@com">iti.hajin@gmail.com</a></p>
+        </div>
+
+        <div id="map">
+            <h3>Find Us on Google maps</h3>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.59797302177!2d74.61936257557579!3d34.2874419052749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e174e69a2c5741%3A0xc3522dac13cb9d45!2sIndustrial%20Training%20Institute%2C%20Hajin!5e1!3m2!1sen!2sin!4v1776751683552!5m2!1sen!2sin"
+                width="99%" height="400" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <!-- <div class="right">
+            <h2>
+                contact info
+            </h2>
+            <b>ADDRESS:</b> <br>
+            Hajin, Bandipora<br>
+            +91 1234567890<br>
+            info@example.com<br>
+            193501 <br> <br>
+
+            <b>EMAIL</b> <br>
+            ITIHAJIN@123
+        </div>
+        <h3>find us on map</h3> -->
+
+
+
+
+    </div>
+    <div id="copyright">
+        <div class="cpr">All Rights reserved | &copy; ITI HAJIN</div>
+        <div class="developed-by">Developed by COPA Trade (Batch 2025-26)</div>
+    </div>
+</body>
+
+</html>
