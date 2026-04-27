@@ -152,7 +152,8 @@ main {
 /* Carousel for hero section */
 #carousel {
     background-color: white;
-    max-height: 250px;
+    height: 200px;
+    /* max-height: 250px; */
     display: flex;
     margin: 5px;
     margin-top: 10px;
@@ -162,6 +163,7 @@ main {
     padding: 5px;
     gap: 5px;
     scrollbar-width: none;
+    position: relative;
 
 
     img {
@@ -169,6 +171,18 @@ main {
         border-radius: inherit;
         scroll-snap-align: center;
         object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: opacity 1s ease;
+
+    }
+
+    img.active{
+        opacity: 1;
     }
 
 }
