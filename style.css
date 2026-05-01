@@ -6,12 +6,11 @@
 }
 
 body {
-    background-color: rgb(234, 245, 251);
+    background-color: rgb(239, 247, 252);
     font-family: "Roboto";
     display: flex;
     flex-direction: column;
-    /* height: 100dvh; */
-
+    
 
 }
 
@@ -164,7 +163,7 @@ main {
     scroll-snap-type: x mandatory;
     padding: 5px;
     gap: 5px;
-    scrollbar-width: none;
+    --scrollbar-width: none;
     position: relative;
 
 
@@ -232,7 +231,7 @@ main {
     div {
         grid-area: text;
         overflow-y: auto;
-        max-height: 230px;
+        max-height: 250px;
         background-color: rgb(232, 232, 232);
         padding: 5px;
         border-radius: 10px;
@@ -246,18 +245,13 @@ main {
     }
 }
 
-@media (max-width : 500px) {
-    #about_iti {
-        grid-template-areas:
-            "img    img"
-            "text   text";
-    }
 
 
-}
-
-#superintendet-corner {
-    /* background-color: red; */
+#superintendent-corner {
+    background-color: rgb(255, 255, 255);
+    padding-top: 5px;
+    margin: 5px;
+    border-radius: 10px;
 
     h3 {
         text-align: center;
@@ -265,38 +259,35 @@ main {
         background-color: rgb(232, 232, 232);
         border-radius: 5px;
         padding: 10px;
-
         margin-inline: 5px;
     }
 
     #superintendent-message {
         gap: 5px;
         display: grid;
-        background-color: transparent;
         overflow-x: auto;
         padding: 5px;
         padding-top: 5px;
         border-radius: 10px;
         grid-template-columns: 350px 1fr;
         grid-template-areas:
-            "img    message";
+            "s-img    msg";
 
 
         img {
             width: 100%;
             height: 100%;
-            grid-area: img;
+            grid-area: s-img;
             border-radius: 10px;
             object-fit: cover;
-            /* border: 1px solid; */
             max-height: 340px;
 
         }
 
         div {
-            grid-area: message;
+            grid-area: msg;
             overflow-y: auto;
-            max-height: 230px;
+            max-height: 250px;
             background-color: rgb(232, 232, 232);
             padding: 5px;
             border-radius: 10px;
@@ -314,14 +305,24 @@ main {
 
 }
 
-@media (max-width : 500px) {
-    
-    #superintendent-corner{
-        grid-template-areas: 
+@media (max-width : 650px) {
+    #welcome-box #about_iti {
+        grid-template-areas:
             "img    img"
-            "message   message";
+            "text   text";
     }
 }
+
+
+@media (max-width: 650px) {
+    #superintendent-corner #superintendent-message {
+        grid-template-areas:
+            "s-img  s-img"
+            "msg    msg"
+        ;
+    }
+}
+
 
 #useful_links {
     background-color: white;
@@ -473,16 +474,19 @@ main {
     margin: 5px;
     border-radius: 10px;
     padding: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
 
 
     #foot_tags {
-        width: 95%;
-        margin: 10px auto;
+        width: 99%;
         background-color: rgb(193, 193, 193);
         border-radius: inherit;
 
         #tag {
-            height: 120px;
+            height: 150px;
             width: 100%;
             display: flex;
             flex-direction: column;
@@ -530,7 +534,6 @@ main {
             #tag {
                 width: 300px;
                 height: 300px;
-                max-width: 300px;
 
             }
         }
@@ -546,7 +549,7 @@ main {
 
 #copyright {
     background-color: #fff;
-    width: 95%;
+    width: 9%;
     margin: 5px auto;
     display: flex;
     justify-content: center;
